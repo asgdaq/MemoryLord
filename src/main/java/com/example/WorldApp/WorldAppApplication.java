@@ -38,7 +38,7 @@ public class WorldAppApplication {
 	@GetMapping("/")
 	public String start(){
 
-		return "/WorldGame.html";
+		return "WorldGame.html";
 	}
 
 	@PostMapping("clear")
