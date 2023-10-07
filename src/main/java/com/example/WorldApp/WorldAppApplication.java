@@ -44,7 +44,7 @@ public class WorldAppApplication {
 	@PostMapping("clear")
 	public String clear(){
 		map.clear();
-		return "/WorldGame.html";
+		return "WorldGame.html";
 	}
 
 	@PostMapping("/element")
@@ -60,12 +60,12 @@ public class WorldAppApplication {
 
 		model.addAttribute("map",map);
 
-		return "/WorldGame.html";
+		return "WorldGame.html";
 	}
 
 	@GetMapping("/TypeGame.html")
 	public String typeGame(){
-		return "/TypeGame.html";
+		return "TypeGame.html";
 	}
 
 
@@ -85,7 +85,7 @@ public class WorldAppApplication {
             map.remove("" , "");
             corect = count;
         }catch (Exception e){
-            return "/Sptii.html";
+            return "Sptii.html";
         }
 
 		return "GameInterface.html";
@@ -167,7 +167,7 @@ public class WorldAppApplication {
 		GameInterface(model);
 
 
-		return "/GameInterface.html";
+		return "GameInterface.html";
 	}
 
 
@@ -181,7 +181,7 @@ public class WorldAppApplication {
 		corect = 0;
 
 		set.clear();
-		return "/FinishGame.html";
+		return "FinishGame.html";
 	}
 
 
@@ -209,7 +209,7 @@ public class WorldAppApplication {
 	public String guide(Model model){
 		model.addAttribute("image1", "image1.jpg");
 
-		return "/Guide.html";
+		return "Guide.html";
 	}
 
 
@@ -222,14 +222,14 @@ public class WorldAppApplication {
 		boolean like = true;
 		model.addAttribute("like" , like);
 
-		return "/Guide.html";
+		return "Guide.html";
 
 	}
 
 
 	@GetMapping("/request.html")
 	public String req(){
-		return "/request.html";
+		return "request.html";
 	}
 
 	@PostMapping("/send")
@@ -243,6 +243,6 @@ public class WorldAppApplication {
 
 
 
-		return "/Guide.html";
+		return "Guide.html";
 	}
 }
