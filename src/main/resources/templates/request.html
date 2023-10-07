@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/IMG_8158.ico">
+    <title>Title</title>
+</head>
+<body>
+
+<p style="font-size:50px;text-align:center;">Write down what you think</p>
+<form action="/send" id="usrform" method="POST" style="text-align:center;font-size:25px">
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br><br>
+
+    <label for="topic">Topic to explain:</label><br>
+    <input type="text" id="topic" name="topic"><br><br>
+
+    <label for="comment">Write down the description:</label><br>
+    <textarea name="comment" form="usrform" id="comment" >Enter text here...</textarea><br><br>
+
+    <input type="submit" value="Send" style="background-color: #336B87;border: none;
+           color: white;
+           padding: 12px 34px;  font-size: 18px;">
+</form>
+
+<a href="/WorldGame.html" >
+    <button style="background-color: #2A3132;border: none;
+    color: white;
+    padding: 8px 16px; font-size: 12px;position:relative;left:675px;top:25px;"><- Back</button>
+</a>
+
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/IMG_8158.ico">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align:center;font-size:70px;background-color:#90AFC5;position:relative;top:-45px;color:black;">Guide and notes</h1>
+<p style="text-align:center;position:relative;top:-75px;">
+    <i >Small and beautiful tips for someone curious like you</i><br>
+    <br>
+</p>
+
+
+<span th:if="${like == true}" style="font-size:40px;color:#763626;text-align:center;">Thank you !</span>
+
+<h3  style="text-align:center;font-size:22px;">What's <i>MemoryLord </i>?</h3>
+<p  style="text-align:center;font-size:18px;">MemoryLord It is a free platform that can be used to facilitate the learning process and to train the memory using <b>flashCards created by you</b>.<br>
+    <i>Flashcards are effective because they promote active recall in your brain, which is the process by which we retrieve a memory.<br>
+    Seeing a term and then actively attempting to remember the meaning helps to move it from short-term to long-term memory.</i>
+</p>
+
+<h3  style="text-align:center;font-size:22px;">How it works ?</h3>
+
+
+<div style="text-align:center;font-size:18px;">
+
+
+    <p><!---style="position:relative;left:300px;top:-135px;"-->On the main page you will find 2 spaces (word and definition).
+        <br> In the Word cell enter the new data, and in the second definition.<br><b> For example</b>: la maison -> the house
+        <br><br>  <img th:src="@{/image1.jpg}" style="position:relative;height:80px; width:250px;border:0.05px #a6a6a6 solid"><br>
+        <br>To add this flashcard press the blue button <b>Add</b>.<br>If you want to remove everything press gray button <b>Clear List</b>
+        <br>Your flashcard should appear <b>in the table</b> below</p><br>
+
+    <img th:src="@{/add.jpg}"  style="width:50 ;height:50px;;border: 0.05px solid #a6a6a6">
+    <img th:src="@{/clear.jpg}" style="width:50 ;height:50px; border: 0.05px solid #a6a6a6">
+    <br>
+</div>
+
+<div style="text-align:center;font-size:18px;">
+    <p ><!--style="position:relative;left:225px;top:-140px;"--> <b>Print List</b> if you want to print the table and <b>Start</b> to begin the quiz.<br>
+        After it , you will select the parameters of the quiz, and pressing <b>Continue</b> the quiz will begin!<br>
+        If you want to print the quiz , click <b>Print quiz</b> and look down to the screen ,<br> and you'll see a new window.<br>
+        In the left , it's a example of printed quiz , for 2 set of flashcards from the table below.</p>
+
+
+    <img th:src="@{Scan.jpg}"  style="width:150px ;height:225px;border: 0.05px solid #a6a6a6; position:relative;left:-190px;top:-130px;">
+
+    <img th:src="@{image (4).jpg}"  style="width:500px ;height:85px;border: 0.05px solid #a6a6a6; position:relative;top:-140px;left:-75px;">
+
+</div>
+
+<br><br>
+
+<div style="text-align:center;">
+    <p  style="position:relative;left:0px;top:-140px;font-size:25px;"><b>Do you want to share with us your impression about <i>MemoryLord</i>?</b></p>
+
+
+    <form action="/like" method="POST">
+        <button style="background-color: #336B87;border: none;
+  color: white;
+  padding: 25px 45px;  font-size: 20px; position:relative;left:0px;top:-120px"><b>Like :)</b>
+        </button>
+    </form>
+
+
+
+
+
+    <a href="/request.html">
+        <button style="background-color: #763626;border: none;
+  color: white;
+  padding: 10px 30px;  font-size: 14px; position:relative;left:35px;top:-100px">Suggest some changes</button>
+    </a>
+
+
+    <button style="background-color: #2A3132;border: none;
+  color: white;
+  padding: 8px 16px; font-size: 12px;position:relative;left:-100px;top:-55px;">
+        <a href="/WorldGame.html" style="text-decoration:none;color:white">
+            <i><- Back</i>
+        </a>
+
+    </button>
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+</html>

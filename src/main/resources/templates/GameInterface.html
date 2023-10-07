@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/IMG_8158.ico">
+    <title>Title</title>
+
+</head>
+<body>
+
+<br><br>
+<br><br>
+<br>
+
+<div style="font-size:55px;text-align: center;">
+    <span th:text="${resultat}" >Oscilloscope</span>
+</div>
+
+        <form action="/game" method="POST" style="font-size:25px;text-align:center;" >
+            <label for="question" style="font-size:15px;"><i>Enter answer</i></label><br>
+            <input type="text" name="question" id="question" style="font-size:30px;height:25px;width:550px;"><br><br>
+
+            <input type="submit" name="next" value="Next question:)" style="background-color: #336B87;border: none;
+  color: white;
+  padding: 12px 34px;  font-size: 18px;">
+
+        </form>
+
+
+   <form action="/printtest" method="POST">
+       <button  style="background-color:#90AFC5;  border: none;
+  color: white;
+  padding: 8px 30px;  font-size: 14px; position:relative;left:650px;top:35px;">Print Quiz</button>
+   </form>
+
+
+<button style="background-color: #2A3132;border: none;
+  color: white;
+  padding: 8px 16px; font-size: 12px;position:relative;left:675px;top:60px;">
+    <a href="/WorldGame.html" style="text-decoration:none;color:white">
+        <i><- Back</i>
+    </a>
+
+</button>
+
+
+
+
+
+<div style="position:relative;left:850px;top:-125px">
+
+    <div th:if="${status}">
+            <p style="color:#336B87;font-size:35px;">
+                Yes!
+            </p>
+    </div>
+
+
+    <div th:unless="${status}">
+        <div th:if="${b > 0 }">
+            <p style="color:#763626;font-size:35px;">
+            No:(
+            </p>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

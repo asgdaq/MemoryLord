@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoryLord</title>
+    <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+    <link rel="stylesheet" href="print.css">
+    <link rel="icon" type="image/x-icon" href="/IMG_8158-_2_.ico">
+</head>
+<body>
+    <p style="font-size:50px;position:relative;left:200px;"><i><b>MemoryLord</b></i> Welcome you!</p>
+
+
+    <video  width="160" height="160" autoplay muted style="position:relative;top:-150px;left:10px; object-fit: cover;" >
+        <source th:src="@{/544CA084-7D31-4C6C-B867-19A4044AF2FD-1078-00000033A32B069D.mp4}" type="video/mp4">
+    </video>
+
+
+
+
+    <form action="/element" style="position:absolute; left:200px;top:175px;"  method="POST">
+        <label for="key" style="font-size:25px;" >Word:</label><br>
+        <input type="text" id="key" name="key" style="font-size:16px;width:200px;"><br><br>
+
+        <label for="elem" style="font-size:25px;">Definition:</label><br>
+        <input type="text" id="elem" name="elem"  style="width:400px;height:20px;font-size:16px;"><br>
+
+        <input type="submit" value="Add" style="position:relative;left:574px;top:-35px;background-color:#90AFC5;  border: none;
+  color: white;
+  padding: 15px 35px;  font-size: 16px;" >
+    </form>
+
+
+
+    <button  style="position:relative;left:600px;top:-100px;background-color:#763626;border: none;
+  color: white;
+  padding: 15px 35px;  font-size: 16px;">
+        <a href="/TypeGame.html" style=" text-decoration: none;color:white">
+        Start
+        </a>
+    </button>
+
+
+    <button style="position:relative;left:700px;top:-100px;background-color: #336B87;border: none;
+  color: white;
+  padding: 15px 35px;  font-size: 16px;"  id="print">Print List</button>
+
+
+    <form action="/clear" method="POST">
+        <button style="position:relative;left:975px;top:-75px; background-color: #2A3132;border: none;
+  color: white;  white-space: pre-wrap;
+  padding: 15px 35px;  font-size: 16px;">Clear list</button>
+    </form>
+
+    <a href="Guide.html">
+        <button style="position:relative;left:1200px;top:-175px; background-color: gray;border: none;
+  color: white;
+  padding: 20px 5px;  font-size: 18px;white-space: normal;">
+            <i><b>Small<br>
+                Guide :)</b></i>
+        </button>
+    </a>
+
+
+
+    <hr style="position:relative;left:0px;top:-15px">
+    <table style="position:relative;left:140px;top:15px ; border:1px solid gray;  border-collapse: collapse; width:80% ; font-size:22px;" id="table">
+        <tr style="border:1px solid gray;  border-collapse: collapse;">
+            <th style="border:1px solid gray;  border-collapse: collapse;">Word</th>
+            <th style="border:1px solid gray;  border-collapse: collapse;">Definition</th>
+        </tr>
+        <!-- Iterăm prin HashMap -->
+        <tr th:each="entry : ${map}" style="border:1px solid gray;  border-collapse: collapse;">
+            <td th:text="${entry.key}" style="border:1px solid gray;  border-collapse: collapse;"></td>
+            <td th:text="${entry.value}" style="border:1px solid gray;  border-collapse: collapse;"></td>
+        </tr>
+    </table>
+
+
+    <script class="object">
+    function printData()
+    {
+
+        var divToPrint=document.getElementById("table");
+        newWin= window.open("");
+        newWin.document.write(divToPrint.outerHTML);
+        newWin.document.close();
+        newWin.print();
+        //newWin.close();
+    }
+
+    document.querySelector("#print").addEventListener("click", function(){
+      printData();
+    });
+
+    </script>
+
+
+
+</body>
+</html>
