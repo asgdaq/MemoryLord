@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Print</title>
+  <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+</head>
+<body>
+<br>
+
+<span style="white-space: pre-line" th:text="${text}" id="obj"></span>
+
+<hr>
+
+<button onclick="window.print()" style="background-color: #336B87;border: none;
+  color: white;
+  padding: 13px 20px; font-size: 12px;">Print this page</button>
+
+<button><a href="/WorldGame.html" style="background-color:#763626;border: none;
+  color: white;
+  padding: 15px 35px;  font-size: 12px;decoration:none;" >Go to main page</a></button>
+
+</body>
+</html>

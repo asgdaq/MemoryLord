@@ -191,12 +191,13 @@ public class WorldAppApplication {
 
 
 	@PostMapping("/printtest")
-	public String print(Model model){
+	public String print(Model model  , Model model1){
 		System.out.println("esteeeeeeeeee!!!!!!!!");
 		PrintTest printTest = new PrintTest() ;
 		String text = printTest.getData(type , temp , (HashMap<String, String>) map , set , (HashSet<String>) doi);
-		printTest.printFile(text);
-		return restat(model);
+		model1.addAttribute("text" , text);
+		//printTest.printFile(text);
+		return "Print.html";
 	}
 
 	@GetMapping("WorldGame.html")
