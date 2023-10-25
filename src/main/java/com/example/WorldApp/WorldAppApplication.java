@@ -5,7 +5,9 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver;
 
 import java.io.IOException;
 import java.util.*;
@@ -84,7 +86,8 @@ public class WorldAppApplication {
             GameInterface(model);
             map.remove("" , "");
             corect = count;
-        }catch (Exception e){
+        }
+		catch (Exception e){
             return "Sptii.html";
         }
 

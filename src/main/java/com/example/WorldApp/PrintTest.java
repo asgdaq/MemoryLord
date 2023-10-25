@@ -87,17 +87,6 @@ public class PrintTest {
                         y += 15; // Adjust the y position for the next line
                     }
 
-                    int imageWidth = 110; // Set the desired width of the image
-                    int imageHeight = 120; // Set the desired height of the image
-
-                    // Load and draw the image
-                    try {
-                        Image image = ImageIO.read(new File("C:\\Users\\User\\Downloads\\WorldApp (1)\\WorldApp\\src\\main\\resources\\static\\IMG_8158.jpeg"));
-                        g2d.drawImage(image, 10, (int) pageFormat.getImageableHeight() - imageHeight, imageWidth, imageHeight, null);
-
-                         } catch (IOException e) {
-                        e.printStackTrace();
-                    }
 
                     return Printable.PAGE_EXISTS;
                 }
