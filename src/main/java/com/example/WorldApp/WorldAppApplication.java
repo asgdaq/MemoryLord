@@ -222,7 +222,7 @@ public class WorldAppApplication {
 		boolean like = true;
 		model.addAttribute("like" , like);
 
-		return "/Guide.html";
+		return "Guide.html";
 
 	}
 
@@ -243,6 +243,6 @@ public class WorldAppApplication {
 
 
 
-		return "/Guide.html";
+		return "Guide.html";
 	}
 }
