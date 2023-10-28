@@ -12,13 +12,20 @@
 
 <hr>
 
-<button onclick="window.print()" style="background-color: #336B87;border: none;
-  color: white;
-  padding: 13px 20px; font-size: 12px;">Print this page</button>
+<style type="text/css" media="print">
+   .no-print { display: none; }
+</style>
 
-<button><a href="/WorldGame.html" style="background-color:#763626;border: none;
+<div  class="no-print">
+    <button onclick="window.print()" style="background-color: #336B87;border: none;
   color: white;
-  padding: 15px 35px;  font-size: 12px;decoration:none;" >Go to main page</a></button>
+  padding: 13px 20px; font-size: 12px;">Print this quiz</button>
+
+    <button style="background-color:#763626;border: none;
+color: white;
+padding: 15px 35px;  font-size: 12px;decoration:none;"><a href="/WorldGame.html" style="  text-decoration: none;color:white;" >Go to main page</a></button>
+</div>
+
 
 </body>
 </html>

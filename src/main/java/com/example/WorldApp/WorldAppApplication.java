@@ -51,10 +51,12 @@ public class WorldAppApplication {
 
 	@PostMapping("/element")
 	public String element(@RequestParam ("key") String key , @RequestParam("elem") String elem  , Model model){
+		AddElementThread thread = new AddElementThread(map, key, elem);
+		thread.start();
 
+
+	//	map.put(key , elem);
 		System.out.println(key + " - > " + elem);
-
-		map.put(key , elem);
 		map.remove("","");
 		System.out.println(map);
 
